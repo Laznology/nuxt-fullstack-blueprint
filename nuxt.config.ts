@@ -2,10 +2,16 @@
 export default defineNuxtConfig({
 	compatibilityDate: "2025-07-15",
 	devtools: { enabled: process.env.NODE_ENV !== "production" },
-	modules: ["@unocss/nuxt", "@nuxt/ui", "@nuxt/image", "@nuxthub/core"],
+	modules: [
+		"@unocss/nuxt",
+		"@nuxt/ui",
+		"@nuxt/image",
+		"@nuxthub/core",
+		"@vueuse/nuxt",
+	],
 	css: ["~/assets/css/main.css"],
 	nitro: {
-		preset: "bun",
+		preset: "node-server",
 		experimental: {
 			tasks: true,
 		},
@@ -17,10 +23,7 @@ export default defineNuxtConfig({
 	},
 	hub: {
 		db: {
-			dialect: "postgresql",
-			connection: {
-				connectionString: process.env.DATABASE_URL,
-			},
+			dialect: "sqlite",
 		},
 	},
 });
