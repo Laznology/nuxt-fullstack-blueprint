@@ -98,23 +98,24 @@ definePageMeta({
         >
           <UCard
             variant="soft"
-            :ui="{ body: 'p-1.5 sm:p-1.5 flex items-center' }"
+            :ui="{ body: 'p-1.5 sm:p-1.5 flex items-center justify-between' }"
             class="w-full cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
           >
             <UUser
               :name="collapsed ? undefined : 'John Doe'"
               :description="collapsed ? undefined : 'john.doe@example.com'"
-              :avatar="{ alt: 'John Doe', size: 'xs' }"
-              class="w-full"
-              :class="[collapsed ? 'justify-center' : '']"
-            >
-              <template #default v-if="!collapsed">
-                <UIcon
-                  name="ph:caret-up-bold"
-                  class="size-4 text-muted shrink-0 ml-auto"
-                />
-              </template>
-            </UUser>
+              :avatar="{
+                src: 'https://avatars.githubusercontent.com/u/739984?v=4',
+                alt: 'John Doe',
+                size: 'xs',
+              }"
+              :class="[collapsed ? 'mx-auto' : 'truncate']"
+            />
+            <UIcon
+              v-if="!collapsed"
+              name="ph:caret-up-bold"
+              class="size-4 text-muted shrink-0 ml-2"
+            />
           </UCard>
         </UDropdownMenu>
       </template>
