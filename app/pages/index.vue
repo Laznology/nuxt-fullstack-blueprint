@@ -36,7 +36,7 @@ useSchemaOrg([
     class="bg-background text-foreground w-full max-w-full overflow-x-hidden font-sans antialiased selection:bg-primary selection:text-primary-foreground min-h-[100dvh] flex flex-col animate-in fade-in duration-700"
   >
     <nav
-      class="fixed top-8 left-1/2 z-50 flex w-full max-w-4xl -translate-x-1/2 items-center justify-between rounded-full border border-border bg-background/60 px-6 py-3 shadow-2xl backdrop-blur-xl"
+      class="fixed top-8 left-1/2 z-50 flex w-full max-w-4xl -translate-x-1/2 items-center justify-between rounded-full ring-1 ring-gray-200 dark:ring-gray-800 bg-background/60 px-6 py-3 shadow-2xl backdrop-blur-xl"
     >
       <div class="flex items-center gap-3">
         <div
@@ -113,14 +113,6 @@ useSchemaOrg([
               />
             </span>
           </UButton>
-          <UButton
-            to="/docs"
-            variant="outline"
-            size="xl"
-            class="rounded-full text-lg h-16 px-10 border-border bg-transparent text-foreground hover:bg-foreground/5 group"
-          >
-            Read the Docs
-          </UButton>
         </div>
       </div>
     </section>
@@ -131,7 +123,7 @@ useSchemaOrg([
           class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 grid-flow-dense"
         >
           <div
-            class="md:col-span-2 md:row-span-2 rounded-3xl p-12 bg-card flex flex-col justify-between border border-border relative overflow-hidden group hover:scale-[1.02] transition-transform duration-500 ease-out"
+            class="md:col-span-2 md:row-span-2 rounded-3xl p-12 bg-white dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-800 flex flex-col justify-between relative overflow-hidden group hover:scale-[1.02] transition-transform duration-500 ease-out"
           >
             <div
               class="absolute inset-0 bg-gradient-to-br from-foreground/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out"
@@ -159,7 +151,22 @@ useSchemaOrg([
           </div>
 
           <div
-            class="md:col-span-2 rounded-3xl p-10 bg-card border border-border flex flex-col justify-between group overflow-hidden hover:scale-[1.02] transition-transform duration-500 ease-out"
+            class="md:col-span-1 rounded-3xl p-10 bg-white dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-800 flex flex-col justify-between group overflow-hidden hover:scale-[1.02] transition-transform duration-500 ease-out"
+          >
+            <div class="flex items-center gap-4 text-muted-foreground mb-6">
+              <UIcon name="ph:magnifying-glass-bold" class="size-6" />
+            </div>
+            <h3 class="text-2xl font-bold text-foreground mb-4">
+              SEO Optimized
+            </h3>
+            <p class="text-muted-foreground font-light leading-relaxed">
+              Auto-generated sitemaps, structured Schema.org data, and dynamic
+              meta tags out-of-the-box.
+            </p>
+          </div>
+
+          <div
+            class="md:col-span-1 rounded-3xl p-10 bg-white dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-800 flex flex-col justify-between group overflow-hidden hover:scale-[1.02] transition-transform duration-500 ease-out"
           >
             <div class="flex items-center gap-4 text-muted-foreground mb-6">
               <UIcon name="ph:database-bold" class="size-6" />
@@ -169,17 +176,17 @@ useSchemaOrg([
                 Database
               </span>
             </div>
-            <h3 class="text-3xl font-bold text-foreground mb-4">
+            <h3 class="text-2xl font-bold text-foreground mb-4">
               Postgres Ready
             </h3>
-            <p class="text-muted-foreground text-lg font-light leading-relaxed">
+            <p class="text-muted-foreground font-light leading-relaxed">
               Drizzle ORM paired with PGlite out-of-the-box. Push your schema
-              and start querying immediately with full type safety.
+              and start querying immediately.
             </p>
           </div>
 
           <div
-            class="md:col-span-1 rounded-3xl p-10 bg-primary border border-primary flex flex-col justify-between group overflow-hidden hover:scale-[1.02] transition-transform duration-500 ease-out"
+            class="md:col-span-1 rounded-3xl p-10 bg-primary border-none flex flex-col justify-between group overflow-hidden hover:scale-[1.02] transition-transform duration-500 ease-out"
           >
             <div
               class="flex items-center gap-4 text-primary-foreground/50 mb-6"
@@ -195,7 +202,7 @@ useSchemaOrg([
           </div>
 
           <div
-            class="md:col-span-1 rounded-3xl p-10 bg-card border border-border flex flex-col justify-between group overflow-hidden hover:scale-[1.02] transition-transform duration-500 ease-out"
+            class="md:col-span-1 rounded-3xl p-10 bg-white dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-800 flex flex-col justify-between group overflow-hidden hover:scale-[1.02] transition-transform duration-500 ease-out"
           >
             <div class="flex items-center gap-4 text-muted-foreground mb-6">
               <UIcon name="ph:palette-bold" class="size-6" />
@@ -210,7 +217,7 @@ useSchemaOrg([
     </section>
 
     <section
-      class="py-24 border-y border-border bg-background overflow-hidden flex whitespace-nowrap"
+      class="py-24 border-y border-gray-200 dark:border-gray-800 bg-background overflow-hidden flex whitespace-nowrap"
     >
       <div class="animate-marquee flex items-center gap-24 shrink-0 w-max">
         <template v-for="i in 2" :key="i">
@@ -298,7 +305,7 @@ useSchemaOrg([
     </section>
 
     <footer
-      class="bg-background px-6 pt-48 pb-24 border-t border-border mt-auto"
+      class="bg-background px-6 pt-48 pb-24 border-t border-gray-200 dark:border-gray-800 mt-auto"
     >
       <div class="mx-auto flex max-w-7xl flex-col items-center text-center">
         <h2
@@ -319,18 +326,10 @@ useSchemaOrg([
         <div
           class="mt-48 w-full flex flex-col items-center justify-between text-sm font-medium text-muted-foreground md:flex-row gap-6"
         >
-          <span
-            >© {{ new Date().getFullYear() }} Nuxt Blueprint Architecture.</span
-          >
+          <span>© {{ new Date().getFullYear() }} Laznology.</span>
           <div class="flex gap-8">
-            <NuxtLink
-              to="/docs"
-              class="hover:text-foreground transition-colors"
-            >
-              Documentation
-            </NuxtLink>
             <a
-              href="https://github.com"
+              href="https://github.com/Laznology/nuxt-fullstack-blueprint"
               class="hover:text-foreground transition-colors"
             >
               GitHub Repository
