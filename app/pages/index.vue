@@ -3,6 +3,32 @@ const colorMode = useColorMode();
 const toggleColorMode = () => {
   colorMode.preference = colorMode.value === "dark" ? "light" : "dark";
 };
+
+definePageMeta({
+  sitemap: {
+    changefreq: "daily",
+    priority: 1,
+  },
+});
+
+useSeoMeta({
+  description:
+    "Zero-latency edge rendering. Absolute type safety. A perfectionist's Nuxt 4 starter template.",
+  ogDescription:
+    "Zero-latency edge rendering. Absolute type safety. A perfectionist's Nuxt 4 starter template.",
+  ogTitle: "Nuxt Blueprint - Production-grade Nuxt 4 Template",
+  title: "Nuxt Blueprint - Production-grade Nuxt 4 Template",
+});
+
+useSchemaOrg([
+  defineWebSite({
+    description: "Production-grade Nuxt 4 meta-template",
+    name: "Nuxt Blueprint",
+  }),
+  defineWebPage({
+    name: "Nuxt Blueprint - Production-grade Nuxt 4 Template",
+  }),
+]);
 </script>
 
 <template>
