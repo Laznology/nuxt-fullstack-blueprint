@@ -17,10 +17,10 @@
     "typescript"
   ],
   "license": "MIT",
-  "author": "ilazer",
+  "author": "Laznology",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ilazer/nuxt-fullstack-blueprint.git"
+    "url": "git+https://github.com/Laznology/nuxt-fullstack-blueprint.git"
   },
   "type": "module",
   "scripts": {

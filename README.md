@@ -1,6 +1,6 @@
 # Nuxt Fullstack Blueprint
 
-![CI Status](https://github.com/ilazer/nuxt-fullstack-blueprint/actions/workflows/ci.yml/badge.svg)
+![CI Status](https://github.com/Laznology/nuxt-fullstack-blueprint/actions/workflows/ci.yml/badge.svg)
 
 A perfectionist's Nuxt 4 starter template, made for type-safe full-stack development. This template leverages the latest Nuxt 4 features, Nuxt UI v4, and Nuxt Hub to provide a seamless developer experience from development to deployment.
 
