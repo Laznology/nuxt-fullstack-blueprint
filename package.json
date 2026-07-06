@@ -1,51 +1,67 @@
 {
-	"name": "nuxt-fullstack-blueprint",
-	"type": "module",
-	"version": "1.0.0",
-	"description": "An opinionated, production-grade Nuxt 4 meta-template engineered for architectural integrity and maximum developer velocity.",
-	"license": "MIT",
-	"private": true,
-	"keywords": [
-		"nuxt",
-		"nuxt4",
-		"nuxt-ui",
-		"unocss",
-		"drizzle-orm",
-		"better-auth",
-		"nuxthub",
-		"typescript",
-		"fullstack",
-		"blueprint",
-		"starter-template"
-	],
-	"scripts": {
-		"build": "nuxt build",
-		"dev": "nuxt dev",
-		"generate": "nuxt generate",
-		"preview": "nuxt preview",
-		"postinstall": "nuxt prepare",
-		"lint": "biome check .",
-		"lint:fix": "biome check --write .",
-		"format": "biome format --write ."
-	},
-	"dependencies": {
-		"@electric-sql/pglite": "^0.5.1",
-		"@nuxt/image": "2.0.0",
-		"@nuxt/ui": "^4.8.2",
-		"@nuxthub/core": "0.10.7",
-		"better-auth": "^1.6.14",
-		"drizzle-kit": "^0.31.10",
-		"drizzle-orm": "^0.45.2",
-		"nuxt": "^4.4.7",
-		"postgres": "^3.4.9",
-		"vue": "^3.5.35",
-		"vue-router": "^5.1.0"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "^2.4.16",
-		"@unocss/nuxt": "^66.7.0",
-		"sass-embedded": "^1.100.0",
-		"unocss": "^66.7.0",
-		"unocss-preset-nuxt-ui": "^4.0.6"
-	}
+  "name": "nuxt-fullstack-blueprint",
+  "version": "1.0.0",
+  "private": true,
+  "description": "An opinionated, production-grade Nuxt 4 meta-template engineered for architectural integrity and maximum developer velocity.",
+  "keywords": [
+    "better-auth",
+    "blueprint",
+    "drizzle-orm",
+    "fullstack",
+    "nuxt",
+    "nuxt-ui",
+    "nuxt4",
+    "nuxthub",
+    "starter-template",
+    "tailwindcss",
+    "typescript"
+  ],
+  "license": "MIT",
+  "author": "ilazer",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilazer/nuxt-fullstack-blueprint.git"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "ultracite check",
+    "lint:fix": "ultracite fix",
+    "format": "ultracite fix",
+    "check": "ultracite check",
+    "fix": "ultracite fix"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "^0.5.1",
+    "@nuxt/image": "2.0.0",
+    "@nuxt/ui": "^4.8.2",
+    "@nuxthub/core": "0.10.7",
+    "@takumi-rs/core": "2.0.0-beta.14",
+    "@vueuse/core": "^14.3.0",
+    "@vueuse/nuxt": "^14.3.0",
+    "better-auth": "^1.6.14",
+    "drizzle-kit": "^0.31.10",
+    "drizzle-orm": "^0.45.2",
+    "nuxt": "^4.4.7",
+    "pinia": "^3.0.4",
+    "postgres": "^3.4.9",
+    "vue": "^3.5.35",
+    "vue-router": "^5.1.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@nuxt/test-utils": "^4.0.3",
+    "@nuxtjs/seo": "^5.3.1",
+    "@pinia/nuxt": "^0.11.3",
+    "@vue/test-utils": "^2.4.6",
+    "nuxt-security": "^2.1.2",
+    "oxfmt": "^0.57.0",
+    "oxlint": "^1.72.0",
+    "ultracite": "7.8.4",
+    "vitest": "^4.1.9"
+  }
 }
