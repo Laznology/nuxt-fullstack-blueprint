@@ -1,13 +1,3 @@
-<script setup lang="ts">
-const breadcrumbs = useDashboardBreadcrumb();
-onMounted(() => {
-  breadcrumbs.value = [
-    { label: "Dashboard", to: "/dashboard" },
-    { label: "Overview" },
-  ];
-});
-</script>
-
 <template>
   <div class="p-4 sm:p-6 lg:p-8 space-y-6">
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
