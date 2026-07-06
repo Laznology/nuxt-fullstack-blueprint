@@ -12,7 +12,11 @@ const handleRegister = async () => {
       name: form.name,
       password: form.password,
     },
-    { onSuccess: () => navigateTo("/dashboard") }
+    {
+      onSuccess: () => {
+        navigateTo("/dashboard");
+      },
+    }
   );
 };
 

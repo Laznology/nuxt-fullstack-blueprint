@@ -6,7 +6,9 @@ const form = reactive({
 
 const handleLogin = async () => {
   await authClient.signIn.email(form, {
-    onSuccess: () => navigateTo("/dashboard"),
+    onSuccess: () => {
+      navigateTo("/dashboard");
+    },
   });
 };
 
