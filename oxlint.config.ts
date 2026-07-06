@@ -10,6 +10,8 @@ export default defineConfig({
     ".output/**",
     "dist/**",
     "node_modules/**",
+    ".agents/**",
+    ".claude/**",
   ],
   rules: {
     "unicorn/filename-case": "off",
