@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     db: {
       dialect: "postgresql",
     },
+    dir: process.env.VERCEL ? "/tmp/hub" : ".data",
   },
   modules: [
     "@nuxt/ui",
@@ -20,10 +21,46 @@ export default defineNuxtConfig({
     "nuxt-security",
     "@pinia/nuxt",
     "@nuxt/test-utils/module",
+    "@vite-pwa/nuxt",
   ],
   nitro: {
     experimental: {
+      openAPI: true,
       tasks: true,
+    },
+    hooks: {
+      compiled: () => {
+        if (process.env.prerender || !import.meta.dev) {
+          setTimeout(() => process.exit(0), 50);
+        }
+      },
+    },
+  },
+  ogImage: {
+    zeroRuntime: true,
+  },
+  pwa: {
+    manifest: {
+      display: "standalone",
+      icons: [
+        {
+          sizes: "192x192",
+          src: "pwa-192x192.png",
+          type: "image/png",
+        },
+        {
+          sizes: "512x512",
+          src: "pwa-512x512.png",
+          type: "image/png",
+        },
+      ],
+      name: "Nuxt Blueprint",
+      short_name: "Nuxt PWA",
+      theme_color: "#000000",
+    },
+    registerType: "autoUpdate",
+    workbox: {
+      navigateFallback: null,
     },
   },
   security: {
