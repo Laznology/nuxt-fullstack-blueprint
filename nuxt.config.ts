@@ -28,13 +28,6 @@ export default defineNuxtConfig({
       openAPI: true,
       tasks: true,
     },
-    hooks: {
-      compiled: () => {
-        if (process.env.prerender || !import.meta.dev) {
-          setTimeout(() => process.exit(0), 50);
-        }
-      },
-    },
   },
   ogImage: {
     zeroRuntime: true,
