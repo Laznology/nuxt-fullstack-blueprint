@@ -118,98 +118,101 @@ useSchemaOrg([
     </section>
 
     <section class="relative w-full bg-background py-48 px-6">
-      <div class="mx-auto max-w-7xl">
-        <div
-          class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 grid-flow-dense"
-        >
+      <div class="mx-auto max-w-6xl">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
           <div
-            class="md:col-span-2 md:row-span-2 rounded-3xl p-12 bg-white dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-800 flex flex-col justify-between relative overflow-hidden group hover:scale-[1.02] transition-transform duration-500 ease-out"
+            class="md:col-span-6 md:row-span-2 rounded-2xl p-10 bg-white dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-800 flex flex-col justify-between"
           >
-            <div
-              class="absolute inset-0 bg-gradient-to-br from-foreground/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out"
-            />
             <div>
               <h2
-                class="text-foreground text-[clamp(2.5rem,4vw,3.5rem)] font-bold tracking-tight mb-6 leading-tight"
+                class="text-foreground text-5xl font-bold tracking-tight mb-6 leading-tight"
               >
-                Save 50+ hours of setup time.
+                Save 50+ hours of<br />setup time.
               </h2>
-              <p
-                class="text-muted-foreground text-xl font-light leading-relaxed"
-              >
-                We pre-configured Nuxt 4, Better Auth, and Drizzle ORM into a
+              <p class="text-muted-foreground text-lg leading-relaxed mb-12">
+                We pre-configured Nuxt, Better Auth, and Drizzle ORM into a
                 single cohesive stack. No more debugging integration errors or
                 spending days writing boilerplate.
               </p>
             </div>
             <div
-              class="mt-24 flex items-center gap-3 text-foreground font-medium"
+              class="flex items-center gap-2 text-foreground font-medium text-sm"
             >
-              <UIcon name="ph:clock-bold" class="size-6 text-[#00DC82]" />
+              <UIcon name="ph:clock-bold" class="size-5 text-[#00DC82]" />
               Launch Faster
             </div>
           </div>
 
           <div
-            class="md:col-span-1 rounded-3xl p-10 bg-white dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-800 flex flex-col justify-between group overflow-hidden hover:scale-[1.02] transition-transform duration-500 ease-out"
+            class="md:col-span-6 rounded-2xl p-8 bg-white dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-800 flex flex-col justify-center"
           >
-            <div class="flex items-center gap-4 text-muted-foreground mb-6">
-              <UIcon name="ph:magnifying-glass-bold" class="size-6" />
-            </div>
-            <h3 class="text-2xl font-bold text-foreground mb-4">
-              SEO Optimized
-            </h3>
-            <p class="text-muted-foreground font-light leading-relaxed">
-              Auto-generated sitemaps, structured Schema.org data, and dynamic
-              meta tags out-of-the-box.
-            </p>
-          </div>
-
-          <div
-            class="md:col-span-1 rounded-3xl p-10 bg-white dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-800 flex flex-col justify-between group overflow-hidden hover:scale-[1.02] transition-transform duration-500 ease-out"
-          >
-            <div class="flex items-center gap-4 text-muted-foreground mb-6">
-              <UIcon name="ph:database-bold" class="size-6" />
-              <span
-                class="text-sm font-mono tracking-widest uppercase text-muted-foreground/50"
+            <div class="flex items-center gap-3 text-muted-foreground mb-4">
+              <UIcon name="ph:database-bold" class="size-5" />
+              <span class="text-xs font-mono uppercase tracking-widest"
+                >Database</span
               >
-                Database
-              </span>
             </div>
-            <h3 class="text-2xl font-bold text-foreground mb-4">
+            <h3 class="text-2xl font-bold text-foreground mb-3">
               Postgres Ready
             </h3>
-            <p class="text-muted-foreground font-light leading-relaxed">
+            <p class="text-muted-foreground leading-relaxed">
               Drizzle ORM paired with PGlite out-of-the-box. Push your schema
-              and start querying immediately.
+              and start querying immediately with full type safety.
             </p>
           </div>
 
           <div
-            class="md:col-span-1 rounded-3xl p-10 bg-primary border-none flex flex-col justify-between group overflow-hidden hover:scale-[1.02] transition-transform duration-500 ease-out"
+            class="md:col-span-3 rounded-2xl p-8 bg-gray-100 dark:bg-gray-100 text-gray-900 flex flex-col justify-center"
           >
-            <div
-              class="flex items-center gap-4 text-primary-foreground/50 mb-6"
-            >
-              <UIcon name="ph:lock-key-bold" class="size-6" />
-            </div>
-            <h3 class="text-2xl font-bold text-primary-foreground mb-4">
-              Ready Auth
-            </h3>
-            <p class="text-primary-foreground/80 font-medium leading-relaxed">
+            <UIcon name="ph:lock-key-bold" class="size-6 text-gray-500 mb-6" />
+            <h3 class="text-xl font-bold mb-2">Ready Auth</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
               Better Auth integrated with database sessions.
             </p>
           </div>
 
           <div
-            class="md:col-span-1 rounded-3xl p-10 bg-white dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-800 flex flex-col justify-between group overflow-hidden hover:scale-[1.02] transition-transform duration-500 ease-out"
+            class="md:col-span-3 rounded-2xl p-8 bg-white dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-800 flex flex-col justify-center"
           >
-            <div class="flex items-center gap-4 text-muted-foreground mb-6">
-              <UIcon name="ph:palette-bold" class="size-6" />
-            </div>
-            <h3 class="text-2xl font-bold text-foreground mb-4">Nuxt UI v4</h3>
-            <p class="text-muted-foreground font-light leading-relaxed">
-              Pre-configured with Tailwind CSS and standard components.
+            <UIcon
+              name="ph:palette-bold"
+              class="size-6 text-muted-foreground mb-6"
+            />
+            <h3 class="text-xl font-bold text-foreground mb-2">Tailwind v4</h3>
+            <p class="text-muted-foreground text-sm leading-relaxed">
+              Pre-configured with Nuxt UI v4 components.
+            </p>
+          </div>
+
+          <div
+            class="md:col-span-6 rounded-2xl p-8 bg-white dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-800 flex flex-col justify-center"
+          >
+            <UIcon
+              name="ph:globe-hemisphere-west-bold"
+              class="size-6 text-muted-foreground mb-6"
+            />
+            <h3 class="text-2xl font-bold text-foreground mb-3">
+              PWA & SEO Optimized
+            </h3>
+            <p class="text-muted-foreground leading-relaxed">
+              Native PWA support, dynamic sitemap, robots.txt, and Schema.org
+              JSON-LD built-in.
+            </p>
+          </div>
+
+          <div
+            class="md:col-span-6 rounded-2xl p-8 bg-white dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-800 flex flex-col justify-center"
+          >
+            <UIcon
+              name="ph:robot-bold"
+              class="size-6 text-muted-foreground mb-6"
+            />
+            <h3 class="text-2xl font-bold text-foreground mb-3">
+              Agent AI Skills Ready
+            </h3>
+            <p class="text-muted-foreground leading-relaxed">
+              Fully optimized for AI assistants with strict architectural rules
+              and subagent workflows.
             </p>
           </div>
         </div>
